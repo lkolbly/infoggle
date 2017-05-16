@@ -66,6 +66,7 @@ function loadTile(x, y) {
             for (var j=0; j<64; j++) {
                 letterdata += data.letters[j];
             }
+	    console.log("http://"+location.hostname+":9016/8/8/"+data.letters+"");
             s += "<div letters='"+letterdata+"' id='letter_"+(i%8)+"x"+(Math.floor(i/8))+"' style='position:absolute;display:block;margin-left:"+x_pos+"px;margin-top:"+y_pos+"px;width:256px;height:256px;background-image:url(http://"+location.hostname+":9016/8/8/"+data.letters+"); background-repeat: no-repeat; background-position: "+shift+"px 0px;z-index:-2;opacity:1.0'></div>";
             break;
         }

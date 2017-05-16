@@ -1,9 +1,11 @@
+import os
 import BaseHTTPServer
 import memcache
 import StringIO
 from PIL import Image
 
-cache = memcache.Client(["127.0.0.1:11211"])
+#cache = memcache.Client(["127.0.0.1:11211"])
+cache = memcache.Client(["memcache:11211"])
 
 letters_im = Image.open("letters.png")
 letters = []
